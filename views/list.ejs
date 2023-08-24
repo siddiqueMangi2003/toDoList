@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <meta charset="UTF-8" />
+    <meta name="vie   port" content="width=device-width, initial-scale=1" />
+    <link href="CSS/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1 id="heading"><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+      <% for (var i =0; i < newListItems.length; i++ ) { %>
+
+      <div class="item">
+        <input type="checkbox" />
+        <p><%= newListItems[i] %></p>
+      </div>
+      <% } %>
+
+      <form class="item" action="/" method="post">
+        <input
+          type="text"
+          name="newItem"
+          placeholder="New Item"
+          autocomplete="off"
+        />
+        <button type="submit" name="list" value=<%=listTitle %>>+</button>
+      </form>
+    </div>
+  </body>
+</html>
